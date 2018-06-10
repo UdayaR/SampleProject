@@ -14,8 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.contrib import admin
+from plc_monitor.views.configure import ConfigureView
+from plc_monitor.views.list import ListView
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^configure/?$', ConfigureView.as_view()),
+    url(r'^list/?$', ListView.as_view()),
 ]

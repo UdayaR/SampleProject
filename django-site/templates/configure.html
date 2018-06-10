@@ -1,0 +1,17 @@
+<html>
+    <body>
+		<h2>Add PLC</h2>
+		
+		<form action="/configure" method="post">
+		  PLC Name:<br>
+		  <input type="text" name="name" value="123">
+		  <br>
+		  IP:<br>
+		  <input type="text" name="ip" value = "192.168.1.1" required pattern="((^|\.)((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]?\d))){4}$">
+		  <br><br>
+		  <input type="submit" value="Submit">
+		</form> 
+		
+		<p>If you click the "Submit" button, the form-data will be sent to a page called "/configure".</p>
+    </body>
+</html>
